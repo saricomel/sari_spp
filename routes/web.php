@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\KelasController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +20,10 @@ Route::get('/', function () {
         "title"=>"Dashboard"
     ]);
 });
+
+Route::resource('siswa', SiswaController::class)
+    ->except(['show','destroy']);
+
+Route::resource('kela', KelasController::class)
+    ->except(['show','destroy']);
+

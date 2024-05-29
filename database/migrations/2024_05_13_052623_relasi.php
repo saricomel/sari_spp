@@ -13,7 +13,7 @@ return new class extends Migration
     {
         //
         Schema::table('siswas', function (Blueprint $table) {
-            $table->foreign('id_kelas')->references('id')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('kela_id')->references('id')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
        });
 
        Schema::table('pembayarans',function(Blueprint $table){
