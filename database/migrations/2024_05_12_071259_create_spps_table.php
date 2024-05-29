@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('spps', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_siswa')->unsigned();
+            $table->bigInteger('siswa_id')->unsigned();
             $table->integer('bulan');
             $table->integer('tahun');
             $table->double('jumblah_spp');

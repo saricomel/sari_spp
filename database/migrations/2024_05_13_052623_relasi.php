@@ -17,14 +17,14 @@ return new class extends Migration
        });
 
        Schema::table('pembayarans',function(Blueprint $table){
-        $table->foreign('id_user')->references('id')->on('users')
+        $table->foreign('user_id')->references('id')->on('users')
         ->onUpdate('cascade')->onDelete('cascade');
-        $table->foreign('id_spp')->references('id')->on('spps')
+        $table->foreign('spp_id')->references('id')->on('spps')
         ->onUpdate('cascade')->onDelete('cascade');
     });
 
     Schema::table('spps', function (Blueprint $table) {
-        $table->foreign('id_siswa')->references('id')->on('siswas')->onUpdate('cascade')->onDelete('cascade');
+        $table->foreign('siswa_id')->references('id')->on('siswas')->onUpdate('cascade')->onDelete('cascade');
    });
 
     }
