@@ -42,6 +42,11 @@
                                     <i class=" fas fa-edit"></i> 
                                 </a>
                             </div>
+                            <form action="{{ route('kela.destroy', $dt->id) }}" method="post" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" class="btn btn-sm btn-danger" value="Delete" onclick="return confirm('Apakah Anda yakin ingin menghapus kelas ini?');">
+                            </form>
 
 
                         </td>

@@ -25,5 +25,5 @@ Route::resource('siswa', SiswaController::class)
     ->except(['show']);
 
 Route::resource('kela', KelasController::class)
-    ->except(['show','destroy']);
+    ->except(['show']);
 

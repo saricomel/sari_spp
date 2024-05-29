@@ -56,5 +56,8 @@ class KelasController extends Controller
 
         return redirect()->route('kela.index')->with('update', 'Data Kelas Berhasil Diubah');
     }
-
+    public function destroy($id){
+        kela::where('id',$id)->Delete();
+        return redirect()->route(('kela.index'))->with('success', 'kelas berhasil dihapus');;
+    }
 }
