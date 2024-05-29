@@ -39,12 +39,12 @@ public function store(Request $request): RedirectResponse
 ]);
 
     siswa::create($request->all());
-    return redirect()->route('siswa.index')->with('success','Data Customer Berhasil Ditambahkan');
+    return redirect()->route('siswa.index')->with('success','Data siswa Berhasil Ditambahkan');
 }
 public function edit(siswa $siswa):View
 {
     return view('siswa.edit',compact('siswa'))->with([
-        "title" => "Ubah Data Customer",
+        "title" => "Ubah Data siswa",
         "data_kelas"=>Kela::all()
     ]);
 }
@@ -53,7 +53,10 @@ public function update (Request $request, siswa $siswa):RedirectResponse
     $request->validate(["nama_siswa"=>"required", "kela_id"=>"required", "nis"=>"required", "jenis_kelamin"=>"required", "no_telpon"=>"required", "alamat"=>"required"]);
     $siswa->update($request->all());
 
-    return redirect()->route('siswa.index')->with('update','Data Pelanggan Berhasil Diubah');
+    return redirect()->route('siswa.index')->with('update','Data siswa Berhasil Diubah');
 }
-
+public function destroy($id){
+    siswa::where('id',$id)->Delete();
+    return redirect()->route(('siswa.index'))->with('success', 'siswa berhasil dihapus');;
+}
 }

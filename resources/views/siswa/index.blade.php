@@ -50,7 +50,11 @@
                                     <i class=" fas fa-edit"></i>
                                 </a>
                             </div>
-
+                            <form action="{{ route('siswa.destroy', $dt->id) }}" method="post" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" class="btn btn-sm btn-danger" value="Delete" onclick="return confirm('Apakah Anda yakin ingin menghapus siswa ini?');">
+                            </form>
 
                         </td>
                     </tr>

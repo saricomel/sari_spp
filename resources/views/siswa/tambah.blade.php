@@ -41,14 +41,16 @@
                     <input type="number" class="form-control" id="nis" name="nis" placeholder="nis">
                 </div>
            
-                <div class="form-group">
-                    <label for="jenis_kelamin">Jenis Kelamin</label>
-                    <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin" placeholder="jenis_kelamin">
-                </div>
+                <label for="jenis_kelamin" class="form-label">jenis kelamin</label>
+                      <select class="form-control" name="jenis_kelamin">
+                          <option hidden>--Pilih jenis kelamin--</option>
+                          <option value="pria">pria</option>
+                          <option value="wanita">wanita</option>
+                      </select><br>
           
                 <div class="form-group">
                     <label for="no_telpon">No Telpon</label>
-                    <input type="text" class="form-control" id="no_telpon" name="no_telpon" placeholder="no_telpon">
+                    <input type="number" class="form-control" id="no_telpon" name="no_telpon" placeholder="no_telpon">
                 </div>
           
                 <div class="form-group">
