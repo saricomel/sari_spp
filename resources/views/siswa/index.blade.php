@@ -10,10 +10,10 @@
 @section('judulh1','Admin - Siswa')
 @section('konten')
 <div class="col-md-12">
-    <div class="card card-info">
+    <div class="card card-dark">
         <div class="card-header">
             <h2 class="card-title">Data Siswa</h2>
-            <a type="button" class="btn btn-success float-right" href="{{ route('siswa.create') }}">
+            <a type="button" class="btn btn-primary float-right" href="{{ route('siswa.create') }}">
                 <i class=" fas fa-plus"></i>Tambah Siswa
             </a>
         </div>
@@ -46,7 +46,7 @@
                         <td>{{ $dt->alamat }}</td>
                         <td>
                             <div class="btn-group">
-                                <a type="button" class="btn btn-warning" href="{{ route('siswa.edit',$dt->id) }}">
+                                <a type="button" class="btn btn-success" href="{{ route('siswa.edit',$dt->id) }}">
                                     <i class=" fas fa-edit"></i>
                                 </a>
                             </div>
