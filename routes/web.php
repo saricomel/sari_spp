@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\PembayaranController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\SppController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,8 @@ Route::resource('siswa', SiswaController::class)
 Route::resource('kela', KelasController::class)
     ->except(['show']);
 
+Route::resource('pembayaran', PembayaranController::class)
+    ->except(['show']);
+
+    Route::resource('spp', SppController::class)
+    ->except(['show']);

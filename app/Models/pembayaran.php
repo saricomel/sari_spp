@@ -4,9 +4,27 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class pembayaran extends Model
+class Pembayaran extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'spp_id',
+        'tanggal_pembayaran',
+        'jumlah_pembayaran'
+    ];
+
+    // Relasi ke model User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // Relasi ke model Spp
+    public function spp()
+    {
+        return $this->belongsTo(Spp::class);
+    }
 }

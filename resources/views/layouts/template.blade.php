@@ -95,7 +95,7 @@
                         </li>                        
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ ($title==='Pembayaran') ? 'active':'' }}">
+                            <a href="{{route('pembayaran.index')}}" class="nav-link {{ ($title==='Pembayaran') ? 'active':'' }}">
                                 <i class="nav-icon fas fa-money-check-alt"></i>
                                 <p>
                                     Pembayaran
@@ -119,7 +119,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ ($title==='SPP') ? 'active':'' }}">
+                            <a href="{{route('spp.index')}}" class="nav-link {{ ($title==='SPP') ? 'active':'' }}">
                                 <i class="nav-icon fas fa-file-invoice-dollar"></i> <!-- Ikon SPP -->
                                 <p>
                                     SPP <!-- Teks SPP -->
