@@ -42,8 +42,8 @@
         <input type="date" name="tanggal_pembayaran" id="tanggal_pembayaran" class="form-control" required>
     </div>
     <div class="form-group">
-        <label for="jumlah_pembayaran">Jumlah Pembayaran</label>
-        <input type="number" name="jumlah_pembayaran" id="jumlah_pembayaran" class="form-control" required>
+        <label for="jumblah_pembayaran">Jumlah Pembayaran</label>
+        <input type="number" name="jumblah_pembayaran" id="jumblah_pembayaran" class="form-control" required>
     </div>
     <button type="submit" class="btn btn-primary">Tambah Pembayaran</button>
 </form>

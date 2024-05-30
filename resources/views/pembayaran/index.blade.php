@@ -13,10 +13,10 @@
 @section('konten')
 
 <div class="col-md-12">
-    <div class="card card-info">
+    <div class="card card-dark">
         <div class="card-header">
             <h2 class="card-title">Data Pembayaran</h2>
-            <a type="button" class="btn btn-success float-right" href="{{ route('pembayaran.create') }}">
+            <a type="button" class="btn btn-primary float-right" href="{{ route('pembayaran.create') }}">
                 <i class=" fas fa-plus"></i> Tambah Pembayaran
             </a>
         </div>
@@ -41,14 +41,11 @@
                         <td>@money($dt->jumblah_pembayaran)</td>
                         <td>
                             <div class="btn-group">
-                                <form action="{{ route('pembayaran.destroy',$dt->id)}}" method="POST">
+                                <form action="{{ route('pembayaran.destroy', $dt->id) }}" method="post" class="d-inline">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">
-                                        <i class=" fas fa-trash"></i>
-                                    </button>
-
-                                </form>
+                                    <input type="submit" class="btn btn-sm btn-danger" value="Delete" onclick="return confirm('Apakah Anda yakin ingin menghapus pembayaran ini?');">
+                                </form>
 
                                 <a type="button" class="btn btn-warning" href="{{ route('pembayaran.edit',$dt->id) }}">
                                     <i class=" fas fa-edit"></i>

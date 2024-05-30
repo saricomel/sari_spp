@@ -24,14 +24,24 @@
         <div class=" card-body">
             <table>
                 <tr>
+                    <th>user</th>
+                    <td>:</td>
+                    <td>{{ $data->user->name }}</td>
+                </tr>
+                <tr>
+                    <th>spp</th>
+                    <td>:</td>
+                    <td>{{ $data->spp->jumblah_spp}}</td>
+                </tr>
+                <tr>
                     <th>Tanggal Pembayaran</th>
                     <td>:</td>
-                    <td>{{ $data[0]->name }}</td>
+                    <td>{{ $data->tanggal_pembayaran }}</td>
                 </tr>
                 <tr>
                     <th>Jumblah Pembayaran</th>
                     <td>:</td>
-                    <td>@money($data[0]->price)</td>
+                    <td>@money($data->jumblah_pembayaran)</td>
                 </tr>
             </table>
         </div>

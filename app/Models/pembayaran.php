@@ -13,7 +13,7 @@ class Pembayaran extends Model
         'user_id',
         'spp_id',
         'tanggal_pembayaran',
-        'jumlah_pembayaran'
+        'jumblah_pembayaran'
     ];
 
     // Relasi ke model User

@@ -39,7 +39,7 @@ class PembayaranController extends Controller
             "user_id" => "required",
             "spp_id" => "required",
             "tanggal_pembayaran" => "required|date",
-            "jumlah_pembayaran" => "required|numeric"
+            "jumblah_pembayaran" => "required",
         ]);
 
         Pembayaran::create($request->all());
@@ -66,7 +66,7 @@ class PembayaranController extends Controller
             "user_id" => "required",
             "spp_id" => "required",
             "tanggal_pembayaran" => "required|date",
-            "jumlah_pembayaran" => "required|numeric"
+            "jumblah_pembayaran" => "required|numeric"
         ]);
 
         $pembayaran->update($request->all());
@@ -74,18 +74,19 @@ class PembayaranController extends Controller
     }
 
     // Menampilkan detail pembayaran
-    public function show(Pembayaran $pembayaran): View
+    public function show($id): View
     {
-        return view('pembayaran.show')->with([
-            "title" => "Detail Pembayaran",
-            "data" => $pembayaran
+
+        $Pembayaran=Pembayaran::find($id);
+        return view('Pembayaran.show')->with([
+            "title" => "Tampil Data Produk",
+            "data"=>$Pembayaran
         ]);
     }
 
     // Menghapus pembayaran dari database
-    public function destroy($id): RedirectResponse
-    {
-        Pembayaran::where('id', $id)->delete();
-        return Redirect()->route('pembayaran.index')->with('delete', 'Pembayaran Berhasil Dihapus');
+    public function destroy($id){
+        pembayaran::where('id',$id)->Delete();
+        return redirect()->route(('pembayaran.index'))->with('success', 'siswa berhasil dihapus');;
     }
 }

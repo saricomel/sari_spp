@@ -30,8 +30,7 @@ Route::resource('siswa', SiswaController::class)
 Route::resource('kela', KelasController::class)
     ->except(['show']);
 
-Route::resource('pembayaran', PembayaranController::class)
-    ->except(['show']);
+Route::resource('pembayaran', PembayaranController::class);
 
 Route::resource('spp', SppController::class)
     ->except(['show']);
