@@ -5,6 +5,7 @@ use App\Http\Controllers\PembayaranController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SppController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +33,8 @@ Route::resource('kela', KelasController::class)
 Route::resource('pembayaran', PembayaranController::class)
     ->except(['show']);
 
-    Route::resource('spp', SppController::class)
+Route::resource('spp', SppController::class)
     ->except(['show']);
+
+route::resource('user', UserController::class)
+    ->except('destroy','Create','show','update','edit');
