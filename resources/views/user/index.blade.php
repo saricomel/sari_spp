@@ -14,7 +14,7 @@
 
 <div class="col-md-4">
 
-    <div class="card bg-primary">
+    <div class="card bg-dark">
         <div class="card-header">
             <h3 class="card-title">Input User</h3>
         </div>
@@ -49,7 +49,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer">
-                <button type="submit" class="btn btn-success float-right">Simpan</button>
+                <button type="submit" class="btn btn-primary float-right">Simpan</button>
             </div>
         </form>
     </div>
