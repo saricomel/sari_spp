@@ -14,9 +14,9 @@
     </div>
     @endif
 
-    <div class="card card-success">
+    <div class="card card-warning">
         <div class="card-header">
-            <h3 class="card-title">Tambah Data pembayaran</h3>
+            <h3 class="card-title">Ubah Data pembayaran</h3>
         </div>
         <!-- /.card-header -->
 <!-- form start -->
@@ -46,7 +46,9 @@
         <label for="jumblah_pembayaran">Jumlah Pembayaran</label>
         <input type="number" name="jumblah_pembayaran" id="jumblah_pembayaran" class="form-control" required value="{{$pembayaran->jumblah_pembayaran}}">
     </div>
-    <button type="submit" class="btn btn-primary">Tambah Pembayaran</button>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-warning float-right">Simpan</button>
+    </div>
 </form>
 </div>
 </div>
