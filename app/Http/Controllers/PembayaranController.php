@@ -46,33 +46,7 @@ class PembayaranController extends Controller
         return redirect()->route('pembayaran.index')->with('success', 'Pembayaran Berhasil Ditambahkan');
     }
 
-    // Menampilkan form untuk mengedit pembayaran
-    public function edit(Pembayaran $pembayaran): View
-    {
-        $users = User::all();
-        $spp = Spp::all();
-
-        return view('pembayaran.edit', compact('pembayaran'))->with([
-            "title" => "Ubah Pembayaran",
-            "users" => $users,
-            "spp" => $spp,
-        ]);
-    }
-
-    // Memperbarui data pembayaran di database
-    public function update(Pembayaran $pembayaran, Request $request): RedirectResponse
-    {
-        $request->validate([
-            "user_id" => "required",
-            "spp_id" => "required",
-            "tanggal_pembayaran" => "required|date",
-            "jumblah_pembayaran" => "required|numeric"
-        ]);
-
-        $pembayaran->update($request->all());
-        return redirect()->route('pembayaran.index')->with('update', 'Pembayaran Berhasil Diubah');
-    }
-
+        
     // Menampilkan detail pembayaran
     public function show($id): View
     {

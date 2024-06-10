@@ -46,10 +46,6 @@
                                     @method('DELETE')
                                     <input type="submit" class="btn btn-sm btn-danger" value="Delete" onclick="return confirm('Apakah Anda yakin ingin menghapus pembayaran ini?');">
                                 </form>
-
-                                <a type="button" class="btn btn-success" href="{{ route('pembayaran.edit',$dt->id) }}">
-                                    <i class=" fas fa-edit"></i>
-                                </a>
                                 <a type="button" class="btn btn-secondary" href="{{ route('pembayaran.show',$dt->id) }}">
                                     <i class=" fas fa-eye"></i>
                                 </a>
